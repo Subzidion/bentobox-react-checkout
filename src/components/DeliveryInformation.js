@@ -7,8 +7,8 @@ let fulfillmentStyle = {
 }
 
 class DeliveryInformation extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       sameAddress: true
     }

@@ -29,7 +29,7 @@ class CheckoutPage extends Component {
       <Provider store={store}>
         <div className='row'>
           <div className='column half'>
-            <OrderSummary />
+            <OrderSummary order={this.props.match.params.orderID}/>
           </div>
           <div className='column half'>
             <div className='billing'>

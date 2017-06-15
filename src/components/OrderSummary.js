@@ -1,6 +1,25 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class OrderSummary extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      order: {}
+    }
+    this.getOrderData(this.props.order)
+  }
+
+  getOrderData(order) {
+    axios.get('https://copenhagenbistro.bentosandbox.com/store/checkout/f5213099-2d8f-4426-9586-0a27340e9348/json')
+      .then(function(data) {
+        console.log(data)
+      })
+      .catch(function(err) {
+        console.log(err)
+      })
+  }
+
   render() {
     return (
       <div>

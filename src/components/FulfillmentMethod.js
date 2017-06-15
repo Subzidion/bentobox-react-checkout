@@ -9,8 +9,8 @@ const mapStateToProps = function(state) {
 }
 
 class FulfillmentMethod extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       selected: 'delivery'
     }
